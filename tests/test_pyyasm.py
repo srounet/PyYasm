@@ -15,7 +15,7 @@ def test_assemble():
         popfd
     """
     expected_assembled = b'f\x9cf`faf\x9d'
-    assembled = pynasm.assemble(mnemonics)
+    assembled = pyyasm.assemble(mnemonics)
     assert assembled == expected_assembled
 
 
@@ -27,12 +27,12 @@ def test_assemble_wrong_type():
         popad
         popfd
     """
-    with pytest.raises(pynasm.exception.PyNasmTypeError):
-        assembled = pynasm.assemble(mnemonics)
+    with pytest.raises(pyyasm.exception.PyYasmTypeError):
+        assembled = pyyasm.assemble(mnemonics)
 
 
 def test_architecture():
-    """Monkey patch platform.architecture to make pynasm raise exception
+    """Monkey patch platform.architecture to make pyyasm raise exception
     and then restore the original method
     """
     # monkey patch platform.architecture
@@ -47,8 +47,8 @@ def test_architecture():
         popad
         popfd
     """
-    with pytest.raises(pynasm.exception.PyNasmArchitectureError):
-        assembled = pynasm.assemble(mnemonics)
+    with pytest.raises(pyyasm.exception.PyYasmArchitectureError):
+        assembled = pyyasm.assemble(mnemonics)
     # restore platform.architecture
     platform.architecture = orig_platform_architecture
     
