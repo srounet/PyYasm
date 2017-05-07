@@ -73,8 +73,8 @@ test_script:
   # Run the project tests
   - if exist coverage.xml (rm coverage.xml)
   - "%CMD_IN_ENV% python setup.py test"
-  - "%CMD_IN_ENV% py.test --cov"
-  - "%CMD_IN_ENV% py.test --cov-report=xml --cov"
+  - "%CMD_IN_ENV% py.test --cov=pyyasm tests"
+  - "%CMD_IN_ENV% py.test --cov=pyyasm --cov-report=xml tests"
 
 after_test:
   # If tests are successful, create binary packages for the project.
