@@ -62,7 +62,6 @@ install:
   # target Python version and architecture
   - "%CMD_IN_ENV% pip install -r requirements.txt"
   - "%CMD_IN_ENV% pip install codecov"
-  - "%CMD_IN_ENV% python setup.py install"
 
 
 build_script:
