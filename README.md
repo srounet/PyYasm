@@ -27,3 +27,7 @@ print(bytecode)
 ```
 python setup.py test
 ```
+
+## Changelog
+
+0.0.1: initial release (07/05/2017)

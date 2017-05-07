@@ -1,11 +1,21 @@
+import os
 import re
 import setuptools
+
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+# Get the long description from the relevant file
+with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 
 
 setuptools.setup(
     name='pyyasm',
     version='0.0.1',
-    description='Wrapper around yasm',
+    description='A python Yasm Wrapper for x86 and x64.',
+    long_description=long_description,
     author='Fabien Reboia',
     author_email='srounet@gmail.com',
     license = "BSD",
