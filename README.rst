@@ -1,7 +1,7 @@
 pyyasm
 ======
-.. image:: https://coveralls.io/repos/github/srounet/PyYasm/badge.svg?branch=master
-  :target: https://coveralls.io/github/srounet/PyYasm?branch=master
+.. image:: https://codecov.io/gh/srounet/PyYasm/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/srounet/PyYasm
   
 .. image:: https://ci.appveyor.com/api/projects/status/y1yj33qd633a5tk5?svg=true
   :target: https://ci.appveyor.com/project/srounet/pyyasm
