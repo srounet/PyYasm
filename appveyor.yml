@@ -68,7 +68,8 @@ build_script:
 
 test_script:
   # Run the project tests
-  #- "%CMD_IN_ENV% python setup.py test"
+  - "%CMD_IN_ENV% python setup.py test"
+  - "%CMD_IN_ENV% python setup.py install"
   - "%CMD_IN_ENV% py.test --cov ."
 
 after_test:
