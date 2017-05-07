@@ -6,6 +6,7 @@ Using pyyasm
 ============
 
 .. code-block:: python
+
     import pyyasm
     
     # some inline asm which does nothing just to show how the library works
@@ -28,6 +29,7 @@ Running tests
 =============
 
 .. code-block:: shell
+
     python setup.py test
 
 Changelog
