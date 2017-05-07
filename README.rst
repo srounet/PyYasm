@@ -18,8 +18,8 @@ Using pyyasm
     # some inline asm which does nothing just to show how the library works
     # __asm as to be bytes.
     __asm = b"""
-	    use32
-	    org 0
+	use32
+	org 0
         pushfd
         pushad
         popad
