@@ -1,5 +1,7 @@
 pyyasm
 ======
+.. image:: https://coveralls.io/repos/github/srounet/PyYasm/badge.svg?branch=master
+  :target: https://coveralls.io/github/srounet/PyYasm?branch=master
 Python x86/x64 wrapper for Yasm
 
 Using pyyasm
