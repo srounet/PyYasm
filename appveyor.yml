@@ -72,7 +72,7 @@ build_script:
 test_script:
   # Run the project tests
   - "%CMD_IN_ENV% python setup.py test"
-  - "%CMD_IN_ENV% py.test --cov-report=xml --cov=./"
+  - "%CMD_IN_ENV% py.test --cov-report=xml --cov"
 
 after_test:
   # If tests are successful, create binary packages for the project.
