@@ -2,6 +2,10 @@ pyyasm
 ======
 .. image:: https://coveralls.io/repos/github/srounet/PyYasm/badge.svg?branch=master
   :target: https://coveralls.io/github/srounet/PyYasm?branch=master
+  
+.. image:: https://ci.appveyor.com/api/projects/status/y1yj33qd633a5tk5?svg=true
+  :target: https://ci.appveyor.com/project/srounet/pyyasm
+
 Python x86/x64 wrapper for Yasm
 
 Using pyyasm
