@@ -61,7 +61,9 @@ install:
   # pip will build them from source using the MSVC compiler matching the
   # target Python version and architecture
   - "%CMD_IN_ENV% pip install -r requirements.txt"
+  - "%CMD_IN_ENV% pip install codecov"
   - "%CMD_IN_ENV% python setup.py install"
+
 
 build_script:
   # Build the compiled extension
@@ -70,16 +72,13 @@ build_script:
 test_script:
   # Run the project tests
   - "%CMD_IN_ENV% python setup.py test"
-  - "%CMD_IN_ENV% py.test --cov --cov-report=xml ."
+  - "%CMD_IN_ENV% py.test --cov-report=xml --cov=./"
 
 after_test:
   # If tests are successful, create binary packages for the project.
   - "%CMD_IN_ENV% python setup.py bdist_wininst"
   - "%CMD_IN_ENV% python setup.py bdist_msi"
-  - ps: "ls dist"
-  - if not exist dist mkdir dist
-  - if exist .coverage (cp .coverage dist\) else (echo no .coverage)
-  - if exist coverage.xml (cp coverage.xml dist\) else (echo no coverage.xml)
+  - "%CMD_IN_ENV% codecov -f coverage.xml -t 06c0a36e-31db-40c6-9f75-b6f6b8232f8f"
 
 artifacts:
   # Archive the generated packages in the ci.appveyor.com build report.
