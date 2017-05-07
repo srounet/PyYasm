@@ -19,6 +19,13 @@ def test_assemble():
     assert assembled == expected_assembled
 
 
+def test_version():
+    """Test version method"""
+    version = pyyasm.version()
+    # 1.3.0
+    assert len(version.split('.')) == 3
+
+
 def test_assemble_wrong_type():
     """Test invalid mnemonics type"""
     mnemonics = """
